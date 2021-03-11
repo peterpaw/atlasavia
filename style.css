@@ -4,6 +4,7 @@
   --clr-header-bg: #2b2b2b;
 
   --nav-height: 70px;
+  --max-width: 1200px;
 }
 
 * {
@@ -62,6 +63,8 @@ h5 {
   align-items: center;
   height: 100%;
   position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .links {
