@@ -1,5 +1,9 @@
 :root {
   --clr-primary: #3498db;
+  --clr-header: rgba(255, 255, 255, 0.95);
+  --clr-header-bg: #2b2b2b;
+
+  --nav-height: 70px;
 }
 
 * {
@@ -40,12 +44,13 @@ h5 {
 
 /* NAVBAR */
 .nav {
-  background-color: white;
-  height: 70px;
+  background-color: var(--clr-header);
+  height: var(--nav-height);
   width: 100%;
   position: fixed;
   top: -70px;
   left: 0;
+  right: 0;
   z-index: 9999;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   transition: top 0.3s;
@@ -56,17 +61,23 @@ h5 {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  margin-left: 1rem;
-  margin-right: 20px;
+  position: relative;
 }
 
 .links {
-  display: flex;
+  display: inline-flex;
   list-style: none;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
+  transition: left 300ms ease;
+  padding-right: 1rem;
 }
+
+.links.active {
+  left: 0;
+}
+
 .links li a {
   position: relative;
   padding-left: 25px;
@@ -88,8 +99,78 @@ h5 {
   content: none;
 }
 
+.logo-wrapper {
+  margin-left: 1rem;
+}
 .logo {
   max-height: 55px;
+}
+
+.icon {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.icon.menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.icon.menu-btn i {
+  color: #555;
+}
+.icon.cancel-btn i {
+  color: white;
+}
+.icon.cancel-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    /* height: 100vh; */
+    width: 100%;
+    /* max-width: 400px; */
+    background-color: var(--clr-primary);
+    padding: 80px 0;
+    left: -100%;
+  }
+  .links li a::after {
+    content: none;
+  }
+  .links li {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 20px;
+    padding: 0;
+  }
+  .links li a {
+    padding-left: 0;
+    color: white;
+  }
+  .links li a:hover {
+    color: white;
+  }
+
+  .logo-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .icon {
+    display: block;
+  }
 }
 
 /* HERO */
