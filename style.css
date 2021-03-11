@@ -38,6 +38,60 @@ h5 {
   color: var(--clr-primary);
 }
 
+/* NAVBAR */
+.nav {
+  background-color: white;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: -70px;
+  left: 0;
+  z-index: 9999;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  transition: top 0.3s;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-left: 1rem;
+  margin-right: 20px;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+.links li a {
+  position: relative;
+  padding-left: 25px;
+  letter-spacing: 1px;
+  color: #555;
+  white-space: nowrap;
+}
+.links li a:hover {
+  color: var(--clr-primary);
+}
+.links li a::after {
+  content: '•';
+  position: absolute;
+  top: -2px;
+  color: rgb(34, 34, 34);
+  left: 9px;
+}
+.links li:first-child a::after {
+  content: none;
+}
+
+.logo {
+  max-height: 55px;
+}
+
 /* HERO */
 .hero {
   position: relative;
