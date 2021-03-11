@@ -314,6 +314,8 @@ h5 {
   grid-template-columns: 1fr;
   grid-gap: 0;
   justify-content: center;
+  margin: auto;
+  max-width: 400px;
 }
 
 .contact-information {
@@ -394,6 +396,7 @@ input[type='submit']:hover {
 @media (min-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 20px;
   }
   .contact-information {
