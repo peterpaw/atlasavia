@@ -7,9 +7,11 @@ const logoWrapper = document.querySelector('.logo-wrapper')
 // mobile menu
 menuBtn.onclick = () => {
   menu.classList.add('active')
+  menuBtn.classList.add('hide')
 }
 cancelBtn.onclick = () => {
   menu.classList.remove('active')
+  menuBtn.classList.remove('hide')
 }
 
 // close mobile menu on link click
@@ -19,6 +21,7 @@ logoWrapper.onclick = () => {
 menuLinks.forEach((link) => {
   link.addEventListener('click', () => {
     menu.classList.remove('active')
+    menuBtn.classList.remove('hide')
   })
 })
 
@@ -31,32 +34,33 @@ document.querySelector('#scrollToTop').addEventListener('click', () => {
   })
 })
 
-document.querySelector('#hero-btn').addEventListener('click', () => {
-  document.querySelector('#activities').scrollIntoView({
-    behavior: 'smooth'
+if (document.querySelector('#hero-btn')) {
+  document.querySelector('#hero-btn').addEventListener('click', () => {
+    document.querySelector('#activities').scrollIntoView({
+      behavior: 'smooth'
+    })
   })
-})
+}
 
 // menu links
-document.querySelector('#link-activities').addEventListener('click', (e) => {
-  e.preventDefault()
-  document.querySelector('#activities').scrollIntoView({
-    behavior: 'smooth'
+if (document.querySelector('#link-activities').length) {
+  document.querySelector('#link-activities').addEventListener('click', (e) => {
+    e.preventDefault()
+    document.querySelector('#activities').scrollIntoView({
+      behavior: 'smooth'
+    })
   })
-})
-document.querySelector('#link-about-us').addEventListener('click', (e) => {
-  e.preventDefault()
-  document.querySelector('#about-us').scrollIntoView({
-    behavior: 'smooth'
-  })
-})
-document.querySelector('#link-contact').addEventListener('click', (e) => {
-  e.preventDefault()
-  document.querySelector('#contact').scrollIntoView({
-    behavior: 'smooth'
-  })
-})
 
-window.onscroll = function () {
-  scrollFunction()
+  document.querySelector('#link-about-us').addEventListener('click', (e) => {
+    e.preventDefault()
+    document.querySelector('#about-us').scrollIntoView({
+      behavior: 'smooth'
+    })
+  })
+  document.querySelector('#link-contact').addEventListener('click', (e) => {
+    e.preventDefault()
+    document.querySelector('#contact').scrollIntoView({
+      behavior: 'smooth'
+    })
+  })
 }
