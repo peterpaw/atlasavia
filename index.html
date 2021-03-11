@@ -244,8 +244,8 @@
       </button>
       <p class="footer-slogan">Let's <i class="fa fa-plane"></i> together</p>
       <div class="footer-links">
-        <a href="#">impressum</a>
-        <a href="#">privacy policy</a>
+        <a href="impressum.html">impressum</a>
+        <a href="privacy-policy.html">privacy policy</a>
       </div>
       <ul class="social-icons">
         <li>
@@ -264,5 +264,17 @@
       <p class="copyright">© 2021 | AtlasAvia GmbH</p>
     </footer>
     <script src="app.js"></script>
+    <script>
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById('navbar').style.top = '0'
+        } else {
+          document.getElementById('navbar').style.top = '-70px'
+        }
+      }
+    </script>
   </body>
 </html>

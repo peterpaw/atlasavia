@@ -642,3 +642,44 @@ footer {
   text-align: center;
   letter-spacing: 0.5px;
 }
+
+/* impressum */
+.impressum,
+.privacy-policy {
+  margin: 130px auto 100px auto;
+  max-width: var(--max-width);
+}
+.impressum h2,
+.privacy-policy h2 {
+  text-align: center;
+}
+
+.impressum-wrapper {
+  margin-top: 50px;
+  padding: 0 25px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.impressum-wrapper ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .impressum {
+    max-width: 800px;
+  }
+  .impressum-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.privacy-policy-wrapper {
+  margin-top: 50px;
+  padding: 0 25px;
+}
+.privacy-policy-wrapper h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
