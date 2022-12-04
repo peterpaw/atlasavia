@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "RalewayX";
+  font-family: "Raleway";
   src: url("Raleway-Light.woff2") format("woff2");
   font-weight: light;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "RalewayX";
+  font-family: "Raleway";
   src: url("Raleway-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
@@ -130,6 +130,7 @@ h5 {
 
 .logo-wrapper {
   margin-left: 1rem;
+  margin-right: auto;
 }
 .logo {
   max-height: 55px;
